@@ -51,7 +51,7 @@ Here are some standard links for getting your machine calibrated:
 #define SERIAL_PORT 0
 
 // This determines the communication speed of the printer
-#define BAUDRATE 11
+#define BAUDRATE 115200
 
 // This enables the serial port associated to the Bluetooth interface
 //#define BTENABLED              // Enable BT interface on AT90USB devices
@@ -153,11 +153,11 @@ Here are some standard links for getting your machine calibrated:
 // 110 is Pt100 with 1k pullup (non standard)
 // 998 and 999 are Dummy Tables. They will ALWAYS read 25°C or the temperature defined below. 
 //     Use it for Testing or Development purposes. NEVER for production machine.
-//     #define DUMMY_THERMISTOR_998_VALUE 25
+#define DUMMY_THERMISTOR_998_VALUE 25
 //     #define DUMMY_THERMISTOR_999_VALUE 100
 
-#define TEMP_SENSOR_0 -1
-#define TEMP_SENSOR_1 -1
+#define TEMP_SENSOR_0 998 // -1
+#define TEMP_SENSOR_1 998 // -1
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
 #define TEMP_SENSOR_BED 0
