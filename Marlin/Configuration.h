@@ -156,13 +156,8 @@ Here are some standard links for getting your machine calibrated:
 #define DUMMY_THERMISTOR_998_VALUE 25
 //     #define DUMMY_THERMISTOR_999_VALUE 100
 
-<<<<<<< HEAD
-#define TEMP_SENSOR_0 998 // -1
-#define TEMP_SENSOR_1 998 // -1
-=======
 #define TEMP_SENSOR_0 998
 #define TEMP_SENSOR_1 998
->>>>>>> origin/Development
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
 #define TEMP_SENSOR_BED 0
