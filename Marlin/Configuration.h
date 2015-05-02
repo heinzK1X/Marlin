@@ -525,7 +525,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 
 // default settings
 // delta speeds must be the same on xyz
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {222, 222, 222, 1120*1.0}  // default for richrap: 55.5  (x4 for microstepping)
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {55.5, 55.5, 55.5, 280*1.0}  // default for richrap: 55.5 
 #define DEFAULT_MAX_FEEDRATE          {500, 500, 500, 29}    // (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {9000,9000,9000,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
 
