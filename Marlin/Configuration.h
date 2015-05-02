@@ -111,7 +111,7 @@ Here are some standard links for getting your machine calibrated:
 #define DELTA_RADIUS (DELTA_SMOOTH_ROD_OFFSET-DELTA_EFFECTOR_OFFSET-DELTA_CARRIAGE_OFFSET)
 
 // Print surface diameter/2 minus unreachable space (avoid collisions with vertical towers).
-#define DELTA_PRINTABLE_RADIUS 60
+#define DELTA_PRINTABLE_RADIUS 60.0
 
 
 //===========================================================================
@@ -511,11 +511,11 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 #define MANUAL_HOME_POSITIONS  // If defined, MANUAL_*_HOME_POS below will be used
 #define BED_CENTER_AT_0_0  // If defined, the center of the bed is at (X=0, Y=0)
 
-//Manual homing switch locations:
+//Manual homing switch locations:s
 // For deltabots this means top and center of the Cartesian print volume.
 #define MANUAL_X_HOME_POS 0
 #define MANUAL_Y_HOME_POS 0
-#define MANUAL_Z_HOME_POS 250 // For delta: Distance between nozzle and print surface after homing.
+#define MANUAL_Z_HOME_POS 400 // For delta: Distance between nozzle and print surface after homing.
 
 //// MOVEMENT SETTINGS
 #define NUM_AXIS 4 // The axis order in all axis related arrays is X, Y, Z, E
@@ -525,7 +525,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 
 // default settings
 // delta speeds must be the same on xyz
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {55.5, 55.5, 55.5, 280*1.0}  // default for richrap: 55.5 
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {111, 111, 111, 560*2.48}  // default for richrap: 55.5 
 #define DEFAULT_MAX_FEEDRATE          {500, 500, 500, 29}    // (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {9000,9000,9000,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
 
