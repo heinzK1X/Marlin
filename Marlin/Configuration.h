@@ -96,10 +96,10 @@ Here are some standard links for getting your machine calibrated:
 // NOTE NB all values for DELTA_* values MUST be floating point, so always have a decimal point in them
 
 // Center-to-center distance of the holes in the diagonal push rods.
-#define DELTA_DIAGONAL_ROD 153.0 // mm
+#define DELTA_DIAGONAL_ROD 149.2 // mm
 
 // Horizontal offset from middle of printer to smooth rod center.
-#define DELTA_SMOOTH_ROD_OFFSET 111.9 // mm
+#define DELTA_SMOOTH_ROD_OFFSET 111.9 // mm     111.9
 
 // Horizontal offset of the universal joints on the end effector.
 #define DELTA_EFFECTOR_OFFSET 33.0 // mm
@@ -220,9 +220,9 @@ Here are some standard links for getting your machine calibrated:
 
 // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 // Ultimaker
-    #define  DEFAULT_Kp 12.83
-    #define  DEFAULT_Ki 0.81
-    #define  DEFAULT_Kd 50.87
+    #define  DEFAULT_Kp 41.44
+    #define  DEFAULT_Ki 5.62
+    #define  DEFAULT_Kd 76.38
 
 // MakerGear
 //    #define  DEFAULT_Kp 7.0
@@ -552,7 +552,7 @@ const bool Z_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the logic 
 #ifdef MANUAL_HOME_POSITIONS
   #define MANUAL_X_HOME_POS 0
   #define MANUAL_Y_HOME_POS 0
-  #define MANUAL_Z_HOME_POS 350 // For delta: Distance between nozzle and print surface after homing.
+  #define MANUAL_Z_HOME_POS 393.7 // For delta: Distance between nozzle and print surface after homing.
 #endif
 
 /**
@@ -567,11 +567,11 @@ const bool Z_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the logic 
 // delta speeds must be the same on xyz
 #define DEFAULT_AXIS_STEPS_PER_UNIT   {111, 111, 111, 560*2.48}  // default for richrap: 55.5 
 #define DEFAULT_MAX_FEEDRATE          {400, 400, 400, 25}    // (mm/sec)
-#define DEFAULT_MAX_ACCELERATION      {5000,5000,5000,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
+#define DEFAULT_MAX_ACCELERATION      {500,500,500,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
 
-#define DEFAULT_ACCELERATION          3000    // X, Y, Z and E acceleration in mm/s^2 for printing moves
+#define DEFAULT_ACCELERATION          300    // X, Y, Z and E acceleration in mm/s^2 for printing moves
 #define DEFAULT_RETRACT_ACCELERATION  3000   // E acceleration in mm/s^2 for retracts
-#define DEFAULT_TRAVEL_ACCELERATION   3000    // X, Y, Z acceleration in mm/s^2 for travel (non printing) moves
+#define DEFAULT_TRAVEL_ACCELERATION   300    // X, Y, Z acceleration in mm/s^2 for travel (non printing) moves
 
 // Offset of the extruders (uncomment if using more than one and relying on firmware to position when changing).
 // The offset has to be X=0, Y=0 for the extruder 0 hotend (default extruder).
