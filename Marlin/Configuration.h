@@ -63,7 +63,7 @@ Here are some standard links for getting your machine calibrated:
 
 // Optional custom name for your RepStrap or other custom machine
 // Displayed in the LCD "Ready" message
-#define CUSTOM_MACHINE_NAME "Deltabot"
+#define CUSTOM_MACHINE_NAME "3DR"
 
 // Define this to set a unique identifier for this printer, (Used by some programs to differentiate between machines)
 // You can use an online service to generate a random UUID. (eg http://www.uuidgenerator.net/version4)
@@ -91,7 +91,7 @@ Here are some standard links for getting your machine calibrated:
 // Make delta curves from many straight lines (linear interpolation).
 // This is a trade-off between visible corners (not enough segments)
 // and processor overload (too many expensive sqrt calls).
-#define DELTA_SEGMENTS_PER_SECOND 100
+#define DELTA_SEGMENTS_PER_SECOND 100 // 200
 
 // NOTE NB all values for DELTA_* values MUST be floating point, so always have a decimal point in them
 
@@ -99,7 +99,7 @@ Here are some standard links for getting your machine calibrated:
 #define DELTA_DIAGONAL_ROD 149.2 // mm
 
 // Horizontal offset from middle of printer to smooth rod center.
-#define DELTA_SMOOTH_ROD_OFFSET 111.9 // mm     111.9
+#define DELTA_SMOOTH_ROD_OFFSET 112.5 // mm     111.9
 
 // Horizontal offset of the universal joints on the end effector.
 #define DELTA_EFFECTOR_OFFSET 33.0 // mm
@@ -552,7 +552,7 @@ const bool Z_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the logic 
 #ifdef MANUAL_HOME_POSITIONS
   #define MANUAL_X_HOME_POS 0
   #define MANUAL_Y_HOME_POS 0
-  #define MANUAL_Z_HOME_POS 393.7 // For delta: Distance between nozzle and print surface after homing.
+  #define MANUAL_Z_HOME_POS 395.6 // For delta: Distance between nozzle and print surface after homing.
 #endif
 
 /**
@@ -566,12 +566,12 @@ const bool Z_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the logic 
 // default settings
 // delta speeds must be the same on xyz
 #define DEFAULT_AXIS_STEPS_PER_UNIT   {111, 111, 111, 560*2.48}  // default for richrap: 55.5 
-#define DEFAULT_MAX_FEEDRATE          {400, 400, 400, 25}    // (mm/sec)
-#define DEFAULT_MAX_ACCELERATION      {500,500,500,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
+#define DEFAULT_MAX_FEEDRATE          {200, 200, 200, 25}    // {400, 400, 400, 25}    // (mm/sec)
+#define DEFAULT_MAX_ACCELERATION      {9000,9000,9000,9000}  // 1500  // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
 
-#define DEFAULT_ACCELERATION          300    // X, Y, Z and E acceleration in mm/s^2 for printing moves
+#define DEFAULT_ACCELERATION          3000 // 1250   // X, Y, Z and E acceleration in mm/s^2 for printing moves
 #define DEFAULT_RETRACT_ACCELERATION  3000   // E acceleration in mm/s^2 for retracts
-#define DEFAULT_TRAVEL_ACCELERATION   300    // X, Y, Z acceleration in mm/s^2 for travel (non printing) moves
+#define DEFAULT_TRAVEL_ACCELERATION   3000 // 300   // X, Y, Z acceleration in mm/s^2 for travel (non printing) moves
 
 // Offset of the extruders (uncomment if using more than one and relying on firmware to position when changing).
 // The offset has to be X=0, Y=0 for the extruder 0 hotend (default extruder).
@@ -580,9 +580,9 @@ const bool Z_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the logic 
 // #define EXTRUDER_OFFSET_Y {0.0, 5.00}  // (in mm) for each extruder, offset of the hotend on the Y axis
 
 // The speed change that does not require acceleration (i.e. the software might assume it can be done instantaneously)
-#define DEFAULT_XYJERK                20.0    // (mm/sec)
-#define DEFAULT_ZJERK                 20.0    // (mm/sec) Must be same as XY for delta
-#define DEFAULT_EJERK                 5.0    // (mm/sec)
+#define DEFAULT_XYJERK                20.0  // 5  // (mm/sec)
+#define DEFAULT_ZJERK                 20.0  // 5  // (mm/sec) Must be same as XY for delta
+#define DEFAULT_EJERK                 20.0  // 5  // (mm/sec)
 
 
 //=============================================================================
@@ -694,7 +694,7 @@ const bool Z_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the logic 
 // See http://minow.blogspot.com/index.html#4918805519571907051
 // If needed, adjust the X, Y, Z calibration coordinates
 // in ultralcd.cpp@lcd_delta_calibrate_menu()
-#define DELTA_CALIBRATION_MENU
+// #define DELTA_CALIBRATION_MENU
 
 /**
  * I2C PANELS
